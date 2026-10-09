@@ -5,6 +5,9 @@
 
 > **Turning NASA Data into Greener Rooftops — Growing a Sustainable Future, One Rooftop at a Time!** 🌍🌿
 
+Live Demo : 
+nasagric-demo.netlify.app
+
 NASAgric is an AI-powered rooftop farming assistant designed to help urban residents make smarter farming decisions using NASA Earth observation data, weather information, and artificial intelligence.
 
 Our mission is to transform unused urban rooftops into productive green spaces by recommending suitable crops, generating seasonal planting plans, and providing intelligent watering schedules and weather alerts.
