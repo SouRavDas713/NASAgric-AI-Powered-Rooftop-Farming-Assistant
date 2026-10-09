@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NASAgric | Space Data for a Greener Bangladesh</title>
+<meta name="description" content="NASAgric turns Earth-observation data, weather, soil and rooftop information into personalized rooftop farming decisions.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <a class="brand" href="#top"><span class="b1">NASA</span><span class="b2">gric</span></a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+  <nav id="menu">
+    <a href="#how">How It Works</a><a href="#nasa">NASA Data</a><a href="#ai">AI Insights</a><a href="#dashboard" data-dash>Dashboard</a>
+    <a class="btn sm" href="#setup">Try Demo →</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero" style="--bg:url(assets/banner.jpg)">
+  <div class="hero-in">
+    <div>
+      <span class="badge">🛰️ NASA data + AI for rooftop farming</span>
+      <h1>From NASA’s view of Earth to <em>your rooftop.</em></h1>
+      <p class="lead">NASAgric combines Earth-observation data, weather intelligence, soil analysis and crop knowledge to create personalized farming guidance for urban rooftops.</p>
+      <div class="cta"><a class="btn" href="#setup">Analyze My Rooftop →</a><a class="btn ghost" href="#how">Explore How It Works</a></div>
+    </div>
+    <aside class="live" aria-label="Live rooftop intelligence, demo data">
+      <div class="live-h"><b>Live Rooftop Intelligence</b><span class="tag">Demo Data</span></div>
+      <p class="muted">📍 Your rooftop · Bangladesh</p>
+      <dl>
+        <div><dt>Temperature</dt><dd><span data-count="31.4" data-dec="1">31.4</span>°C</dd></div>
+        <div><dt>Rain probability</dt><dd><span data-count="28">28</span>%</dd></div>
+        <div><dt>Soil</dt><dd class="g">Analyzed ✓</dd></div>
+        <div><dt>AI status</dt><dd class="g"><i class="dot"></i>Ready</dd></div>
+      </dl>
+    </aside>
+  </div>
+  <p class="attr">Independent project using NASA Earth-observation data.</p>
+</section>
+
+<section id="problem" class="sec light">
+  <div class="wrap">
+    <h2>Rooftop growers are guessing</h2>
+    <p class="sub">Urban rooftop farming is growing in popularity, but most existing solutions give general agricultural information rather than recommendations for your rooftop.</p>
+    <ul class="prob">
+      <li>Choosing suitable crops for their rooftop</li>
+      <li>Knowing if the soil suits a particular crop</li>
+      <li>Knowing when and how much to water</li>
+      <li>Protecting plants from excessive heat</li>
+      <li>Planning crops around seasonal conditions</li>
+      <li>Making decisions as the weather changes</li>
+    </ul>
+  </div>
+</section>
+
+<section id="how" class="sec light">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sub">Four steps from a rooftop to a plan. Select a step to see what happens inside it.</p>
+    <div class="steps" id="steps"></div>
+    <figure class="flow">
+      <img src="assets/workflow.jpg" loading="lazy" width="1280" height="1169" alt="System workflow: user input, CNN soil analysis, NASA, weather and crop data, AI model, then crop recommendation, one-year plan, water schedule, heat alert and rain alert.">
+      <figcaption>System workflow</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="why-nasa" class="sec dark">
+  <div class="wrap">
+    <h2>Why NASA data matters</h2>
+    <p class="sub">NASAgric uses Earth-observation and environmental data to provide broader environmental context for rooftop-level decisions.</p>
+    <div class="cards3">
+      <div class="dc"><b>🌡 Temperature</b>Helps identify heat-stress conditions.</div>
+      <div class="dc"><b>🌧 Precipitation</b>Helps adjust watering recommendations.</div>
+      <div class="dc"><b>🌱 Environmental indicators</b>Provides broader environmental context.</div>
+    </div>
+  </div>
+</section>
+
+<section id="nasa" class="sec dark">
+  <div class="wrap">
+    <h2>NASA data meets your rooftop</h2>
+    <p class="sub">Large-scale environmental data becomes useful only when it changes a decision. Each card shows the data and what it changes for your rooftop.</p>
+    <div class="chain"><span>🛰️ NASA Earth observation</span><span>🤖 AI data fusion</span><span>🏠 Rooftop recommendation</span></div>
+    <div class="cards4" id="nasaCards"></div>
+    <div class="tw"><table class="tbl">
+      <caption>NASA data categories and planned sources</caption>
+      <thead><tr><th>Data category</th><th>NASA source</th><th>Used for</th></tr></thead>
+      <tbody>
+        <tr><td>Temperature</td><td>NASA POWER</td><td>Crop suitability and season plan</td></tr>
+        <tr><td>Precipitation</td><td>GPM IMERG</td><td>Rain pattern and water schedule</td></tr>
+        <tr><td>Vegetation and land data</td><td>MODIS / VIIRS (NDVI)</td><td>Vegetation and environmental indicators</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Sample values for demonstration. No live NASA measurements are shown until a data API is connected.</p>
+  </div>
+</section>
+
+<section id="ai" class="sec light">
+  <div class="wrap">
+    <h2>From space to soil</h2>
+    <p class="sub">Earth-observation context and your rooftop details go into one AI engine, which returns a plan for your rooftop and explains why.</p>
+    <ol class="space" id="space" aria-label="From space to soil"></ol>
+    <h3 class="h3">AI components</h3>
+    <div class="cards4 aic">
+      <div class="card"><h4>CNN model</h4><p>Soil image analysis</p></div>
+      <div class="card"><h4>Recommendation model</h4><p>Crop suitability prediction</p></div>
+      <div class="card"><h4>Decision engine</h4><p>Combines environmental, weather, soil, crop and user information</p></div>
+      <div class="card"><h4>Explainable recommendation</h4><p>Shows why a crop or action was recommended</p></div>
+    </div>
+    <p class="note lm">All four stages run on sample data in this frontend demo.</p>
+  </div>
+</section>
+
+<section id="context" class="sec dark">
+  <div class="wrap">
+    <h2>Your rooftop in context</h2>
+    <p class="sub">A regional view of where your rooftop sits, with the environmental layers that feed its recommendations. <span class="tag">Demo Data</span></p>
+    <div class="mapw">
+      <figure class="map">
+        <svg viewBox="0 0 300 350" role="img" aria-label="Simplified map of Bangladesh with the rooftop location marked in the southeast">
+          <defs><pattern id="gr" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#1f3354" stroke-width=".6"/></pattern></defs>
+          <rect width="300" height="350" fill="url(#gr)"/>
+          <path d="M125 22L172 30L212 24L226 56L206 82L236 96L252 132L242 170L256 210L262 262L246 330L232 290L222 250L210 300L190 330L165 308L150 288L120 278L90 254L70 214L60 174L76 136L60 100L86 70L110 56Z" fill="#0f2a3d" stroke="#22c55e" stroke-width="1.6" stroke-linejoin="round"/>
+          <circle class="ping" cx="228" cy="252" r="9" fill="none" stroke="#22d3ee" stroke-width="1.5"/>
+          <circle cx="228" cy="252" r="5" fill="#f97316"/>
+          <text x="150" y="340" fill="#9fb2c8" font-size="11" text-anchor="middle">Simplified illustration, not to scale</text>
+        </svg>
+        <figcaption>📍 Rooftop location</figcaption>
+      </figure>
+      <div class="mapd">
+        <div class="dc"><small>🌡 Temperature · Demo Data</small><b>31.4°C</b></div>
+        <div class="dc"><small>🌧 Rainfall · Demo Data</small><b>12.8 mm</b></div>
+        <div class="dc"><small>🌱 Environmental index · Demo Data</small><b>0.64</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="setup" class="sec dark">
+  <div class="wrap narrow">
+    <h2>Tell us about your rooftop</h2>
+    <p class="sub">No account or backend needed. The demo uses sample data.</p>
+    <form id="form" class="form">
+      <label class="full">📍 Location
+        <span class="row"><input id="loc" value="Chattogram, Bangladesh"><button type="button" class="btn ghost sm" id="geo">Use my location</button></span>
+      </label>
+      <label>🏠 Rooftop size <input value="120 sq ft"></label>
+      <label>☀️ Daily sunlight <select><option>6–8 hours</option><option>4–6 hours</option><option>8+ hours</option><option>Under 4 hours</option></select></label>
+      <label>🪴 Container type <select><option>Pot</option><option>Grow bag</option><option>Raised bed</option><option>Crate</option></select></label>
+      <label>🪴 Number of containers <input type="number" min="1" value="12"></label>
+      <div class="full">
+        <div class="drop" id="drop" tabindex="0" role="button" aria-label="Upload soil image">
+          <div id="dropIdle"><b>🪨 Upload soil image</b><span>Drag and drop, or browse</span><span class="btn ghost sm">Choose Image</span></div>
+          <img id="prev" alt="Uploaded soil preview" hidden>
+        </div>
+        <input type="file" id="file" accept="image/*" hidden>
+        <div id="soil" class="soil" hidden></div>
+      </div>
+      <details class="full"><summary>Optional details</summary>
+        <div class="opt"><label>Orientation <select><option>South</option><option>North</option><option>East</option><option>West</option></select></label>
+        <label>Water availability <select><option>Tap water</option><option>Stored rainwater</option><option>Limited</option></select></label>
+        <label>Existing crops <input placeholder="e.g. chili"></label></div>
+      </details>
+      <button class="btn full" type="submit">Analyze My Rooftop →</button>
+    </form>
+  </div>
+</section>
+
+<section id="dashboard" class="sec light">
+  <div class="wrap">
+  <div id="dashEmpty" class="empty"><h2>Your dashboard</h2><p>Analyze your rooftop first to unlock your personalized dashboard.</p><a class="btn" href="#setup">Analyze My Rooftop →</a></div>
+  <div id="dashMain" hidden>
+    <h2 id="hello">Good afternoon 👋</h2>
+    <p class="sub">Here’s your rooftop intelligence. <span class="tag">Demo Analysis</span></p>
+    <div class="cards4" id="stats"></div>
+    <h3 class="h3">Your best crops <span class="tag">Demo Analysis</span></h3><div class="cards3" id="crops"></div>
+    <div class="two">
+      <div><h3 class="h3">Smart water intelligence <span class="tag">Demo Data</span></h3><div class="panel" id="water"></div></div>
+      <div><h3 class="h3">3-day weather and alerts <span class="tag">Demo Data</span></h3><div class="panel" id="wx"></div></div>
+    </div>
+    <div class="two">
+      <div><h3 class="h3">Rooftop health score</h3><div class="panel" id="health"></div></div>
+      <div><h3 class="h3">Your 1-year rooftop farming plan</h3><div class="panel" id="plan"></div></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="sec dark">
+  <div class="wrap">
+    <h2>What it helps you do</h2>
+    <ul class="ticks"><li>Select suitable crops</li><li>Reduce unnecessary watering</li><li>Prepare for heat</li><li>Respond to rainfall</li><li>Plan farming seasonally</li><li>Make data-driven decisions</li></ul>
+    <blockquote class="concept">USER → NASA + WEATHER + SOIL + CROP DATA → AI → PERSONALIZED ROOFTOP FARMING PLAN</blockquote>
+    <h3 class="h3 team-h">Built by Team NASAgric</h3>
+    <ul class="team"><li>Md. Mahmud Khan Munna</li><li>Md Tanbir Hossain Shehab</li><li>Shamsul Huda Md Nahian</li><li>Bushra Mohammed Harun</li><li>Sree Sourav Chandra Das</li></ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div><span class="brand"><span class="b1">NASA</span><span class="b2">gric</span></span><p>Space Data for a Greener Bangladesh</p><p class="muted">Independent project using NASA Earth-observation data.</p></div>
+  <nav><a href="#how">How It Works</a><a href="#nasa">NASA Data</a><a href="#ai">AI Insights</a><a href="#dashboard" data-dash>Dashboard</a></nav>
+</footer>
+
+<div class="run" id="run" hidden role="dialog" aria-modal="true" aria-label="Analysis in progress"><div class="run-box"><h3>Analyzing your rooftop…</h3><p class="muted">Simulated AI output using demo data. No real model or API is running.</p><ul id="runSteps"></ul></div></div>
+<dialog id="why"><form method="dialog"><button class="x" aria-label="Close">×</button></form><div id="whyBody"></div></dialog>
+<script src="script.js"></script>
+</body>
+</html>
